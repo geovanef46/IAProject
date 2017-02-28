@@ -1,8 +1,8 @@
 package Model;
 
 public class No {
-	private String[] comps = {"C1","C2", "C3", "C4", "C5"};
-        private String[] salas = {"C1","C2", "C3", "C4", "C5"};
+        Componente comp;
+       
 //	private No fim = new No(1,2,3,4,5,6,7,8,0);		
 
 		
