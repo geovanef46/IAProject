@@ -13,7 +13,7 @@ public class Matriz {
 
     int horarios = 2;
     int turmas = 5;
-    No[][] array = new No[horarios][turmas];
+    private Componente[][] array = new Componente[horarios][turmas];
     int linha = 0;
     int coluna = 0;
 
@@ -51,6 +51,20 @@ public class Matriz {
             return true;
         }
         return false;
+    }
+
+    /**
+     * @return the array
+     */
+    public Componente getArray(int linha, int coluna) {
+        return array[linha][coluna];
+    }
+
+    /**
+     * @param array the array to set
+     */
+    public void setArray(Componente c) {
+        this.array[linha][coluna] = c;
     }
 
 }

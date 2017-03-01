@@ -6,6 +6,7 @@
 package Model;
 
 import java.util.List;
+import java.util.Vector;
 
     
 
@@ -14,6 +15,8 @@ import java.util.List;
  * @author jason
  */
 public class Solucao {
-    List<Matriz> listaDeMatrizes;
+    List<Matriz> listaDeMatrizes = new Vector<>();
     
+    
+  
 }

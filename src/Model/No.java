@@ -1,8 +1,29 @@
 package Model;
 
 public class No {
-        Componente comp;
+        Matriz matriz;
+        No pai;
+        No filhoEsquerda;
+        No filhoDireita;
        
+    public No(Matriz matriz, No pai) {
+        this.matriz = matriz;
+        this.pai = pai;
+
+    }
+    
+    public No(Matriz matriz, No pai, No filhoEsquerda, No filhoDireita) {
+        this.matriz = matriz;
+        this.pai = pai;
+        this.filhoEsquerda = filhoEsquerda;
+        this.filhoDireita = filhoDireita;
+    }
+        
+
+        @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj); //To change body of generated methods, choose Tools | Templates.
+    }
 //	private No fim = new No(1,2,3,4,5,6,7,8,0);		
 
 		
@@ -220,5 +241,9 @@ public class No {
 //	}
 //	
 //}
+
+
+
+
         
 }

@@ -51,25 +51,45 @@ public class Populacao {
     }
     
     public void montaLista(List<Componente> comp){
-    Componente c3;
+
     List<Componente> listaAux = comp;
         for(Componente c1: comp){
             for (Componente c2: listaAux) {
-                 c3 = c1;
-                 c3.setReferencia(c2);
-                System.out.println("-> "+c3.getCod()+","+c3.getReferencia().getCod());
-                listaPovoada.add(c3);
+                c1.setReferencia(c2);
+                 addLista(c1);
+                
             }
             
         }
+        retirarRepetidos();
+    }
+    public void addLista(Componente c){
+        Componente c1 = new Componente(c.getCod(), c.getNome(), null);
+        c1.setReferencia(c.getReferencia());
 
+        listaPovoada.add(c1);
+    }
+    
+    
+    
+    public void retirarRepetidos(){
+        List<Componente> list = new ArrayList<>();
+        for(Componente c : listaPovoada){
+            if(c.getCod().equals(c.getReferencia().getCod())){
+             list.add(c);
+            }
+         
+        }
+        for(Componente c: list){
+            listaPovoada.removeAll(list);
+        }
     }
     
     
     public void printList(){
         int i = 1;
         for(Componente c: listaPovoada){
-        System.err.println(i+": C -> "+c.getCod()+","+c.getReferencia().getCod());
+        System.out.println(i+": C -> "+c.getCod()+","+c.getReferencia().getCod());
         i++;
         }
      }
@@ -77,7 +97,9 @@ public class Populacao {
     
     public static void main(String[] args) {
         Populacao gera = new Populacao();
+       
         gera.printList();
+        
     }
     
     

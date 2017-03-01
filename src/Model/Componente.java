@@ -93,6 +93,11 @@ public class Componente {
     public String toString() {
         return this.getNome(); //To change body of generated methods, choose Tools | Templates.
     }
+
+
+    public boolean equals(Componente obj) {
+        return this.getCod().equals(obj.getCod()); //To change body of generated methods, choose Tools | Templates.
+    }
    
     
     
