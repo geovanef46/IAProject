@@ -3,8 +3,8 @@ package Model;
 public class No {
         Matriz matriz;
         No pai;
-        No filhoEsquerda;
-        No filhoDireita;
+        No proxfilhoEsquerda;
+        No proxfilhoDireita;
        
     public No(Matriz matriz, No pai) {
         this.matriz = matriz;
@@ -15,9 +15,10 @@ public class No {
     public No(Matriz matriz, No pai, No filhoEsquerda, No filhoDireita) {
         this.matriz = matriz;
         this.pai = pai;
-        this.filhoEsquerda = filhoEsquerda;
-        this.filhoDireita = filhoDireita;
+        this.proxfilhoEsquerda = filhoEsquerda;
+        this.proxfilhoDireita = filhoDireita;
     }
+    
         
 
         @Override
